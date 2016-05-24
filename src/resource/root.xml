@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<!--
+  - This file is included by the struts.xml file as an example
+  - of how to break up the configuration file into multiple files.
+-->
+<struts>
+  <!-- 根目录 / -->
+    <package name="root" namespace="/" extends="default"> 
+    	<action name="login" class="com.free4lab.classtable.account.LoginAction">
+			<result name="success">/main.jsp</result>
+		</action>
+		<action name="" class="">
+			<result name="success">/main.jsp</result>
+		</action>
+    	<action name="LoginCheck" class="com.free4lab.classtable.action.LoginCheckAction">
+			<result type="json"></result>
+		</action>
+		<action name="admin" class="com.free4lab.classtable.action.GetAllClassTableAction">
+			<result name="success">/administrator.jsp</result>
+		</action>
+		<action name="student" class="com.free4lab.classtable.action.StudentAction">
+			<result name="success">/student.jsp</result>
+		</action>
+		<action name="teacher" class="com.free4lab.classtable.action.TeacherAction">
+			<result name="success">/teacher.jsp</result>
+		</action>
+		<action name="newcourse" class="com.free4lab.classtable.action.NewCourseAction">
+			<result type="json"></result>
+		</action>
+		<action name="EditPassword" class="com.free4lab.classtable.action.EditPasswordAction">
+			<result type="json"></result>
+		</action>
+		<action name="EditClassTable" class="com.free4lab.classtable.action.EditClassTableAction">
+			<result type="json"></result>
+		</action>
+		<action name="EditStudent" class="com.free4lab.classtable.action.EditStudentAction">
+			<result type="json"></result>
+		</action>
+		<action name="EditTeacher" class="com.free4lab.classtable.action.EditTeacherAction">
+			<result type="json"></result>
+		</action>
+		<action name="getoldclasstable" class="com.free4lab.classtable.action.GetOldClassTableAction">
+			<result name="success">/_facebox_edittable.jsp</result>
+		</action>
+		<action name="getoldstudent" class="com.free4lab.classtable.action.GetOldStudentAction">
+			<result name="success">/_facebox_editstudent.jsp</result>
+		</action>
+		<action name="getoldteacher" class="com.free4lab.classtable.action.GetOldTeacherAction">
+			<result name="success">/_facebox_editteacher.jsp</result>
+		</action>
+		<action name="NewClassTable" class="com.free4lab.classtable.action.NewClassTableAction">
+			<result type="json"></result>
+		</action>
+		<action name="remove" class="com.free4lab.classtable.action.RemoveClassTableAction">
+			<result type="json"></result>
+		</action>
+		<action name="search" class="com.free4lab.classtable.action.SearchClassTableAction">
+			<result name="success">/administrator.jsp</result>
+		</action>
+    </package>
+</struts>
